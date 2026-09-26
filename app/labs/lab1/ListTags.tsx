@@ -40,6 +40,17 @@ export default function ListTags() {
             <li>The Girl Who Leapt Through Time</li>
             <li>Jumper</li>
         </ul>
+        
+        <ul id="wd-ai-html-tags">
+          <li>h1 - creates a large heading</li>
+          <li>p - creates a paragraph</li>
+          <li>ol - creates an ordered list</li>
+          <li>ul - creates an unordered list</li>
+          <li>table - creates a table</li>
+        </ul>
+
+
+
       </div>
     );
   }

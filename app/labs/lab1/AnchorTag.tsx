@@ -8,6 +8,7 @@ export default function AnchorTag() {
       </a>{" "}
       to get dummy text
       <br />
+
       <a href="https://github.com/jannunzi" id="wd-github">
         GitHub
       </a>
@@ -29,6 +30,15 @@ export default function AnchorTag() {
         rel="noreferrer"
       >
         My GitHub
+      </a>
+
+      <br />
+
+      <a
+        id="wd-ai-link"
+        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table"
+      >
+        MDN: table element
       </a>
     </>
   );

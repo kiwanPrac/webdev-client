@@ -23,6 +23,13 @@ export default function ParagraphTag() {
           This is the third paragraph. Wrap each paragraph with the paragraph
           tag to tell browsers to render the gaps.
         </p>
+
+        <p id="wd-ai-p">
+          The paragraph tag groups text into separate blocks. Browsers add vertical
+          spacing between paragraph elements, making the content easier to read.
+        </p>
+
+
         <p id="wd-p-your-1">
             I am come from South Korea.
         </p>
