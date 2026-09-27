@@ -24,7 +24,7 @@ export default function AnchorTag() {
       <br />
 
       <a
-        href="https://github.com/kiwanPrac"
+        href="https://github.com/kiwanPrac/webdev-client"
         id="wd-your-github"
         target="_blank"
         rel="noreferrer"
