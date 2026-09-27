@@ -9,7 +9,6 @@ export default function TOC() {
           Home
         </Link>
       </li>
-      {/* ... lab links ... */}
       <li>
         <Link href="/book/ch1" id="wd-toc-book-link">
           Chapter 1
