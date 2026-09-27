@@ -7,6 +7,7 @@ import Checkboxes from "./Checkboxes";
 import Dropdowns from "./Dropdowns";
 import OtherFieldTypes from "./OtherFieldTypes";
 import Buttons from "./Buttons";
+import YourForm from "./YourForm";
 
 export default function Forms() {
   return (
@@ -26,6 +27,8 @@ export default function Forms() {
         <OtherFieldTypes />
         <Buttons />
       </form>
+
+      <YourForm />
     </div>
   );
 }
