@@ -14,10 +14,20 @@ export default function TOC() {
           Chapter 1
         </Link>
       </li>
+
+      <li>
+        <Link href="/labs/lab2">
+          Lab 2
+        </Link>  
+      </li>
+
+
       <li>
         <Link href="/" id="wd-kambaz-link">
           Kambaz
         </Link>
+
+
       </li>
     </ul>
   );

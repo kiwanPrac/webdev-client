@@ -4,18 +4,14 @@ import CourseStatus from "./Status";
 export default function Home() {
   return (
     <div id="wd-home">
-      <table>
-        <tbody>
-          <tr>
-            <td valign="top" width="70%">
-              <Modules />
-            </td>
-            <td valign="top">
-              <CourseStatus />
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div className="flex gap-4">
+        <div className="flex-1 min-w-0">
+          <Modules />
+        </div>
+        <div className="hidden lg:block w-[250px] shrink-0">
+          <CourseStatus />
+        </div>
+      </div>
     </div>
   );
 }
