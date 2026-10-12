@@ -16,6 +16,7 @@ export default function CourseNavigation({ cid }: { cid: string }) {
     { label: "Quizzes", href: `/courses/${cid}/quizzes`, id: "wd-course-quizzes-link" },
     { label: "Grades", href: `/courses/${cid}/grades`, id: "wd-course-grades-link" },
     { label: "People", href: `/courses/${cid}/people/table`, id: "wd-course-people-link" },
+    {label: "Sample", href: `/courses/${cid}/home`, id: "wd-course-ai-link"},
   ];
 
   return (
@@ -25,8 +26,9 @@ export default function CourseNavigation({ cid }: { cid: string }) {
     >
       {links.map((link) => {
         const active =
-          pathname === link.href ||
-          pathname.startsWith(link.href + "/");
+          link.id !== "wd-course-ai-link" &&
+          (pathname === link.href ||
+            pathname.startsWith(link.href + "/"));
 
         return (
           <Link
@@ -41,6 +43,7 @@ export default function CourseNavigation({ cid }: { cid: string }) {
           >
             {link.label}
           </Link>
+          
         );
       })}
     </div>
