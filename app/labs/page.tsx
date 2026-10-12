@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 export default function Labs() {
@@ -5,6 +6,18 @@ export default function Labs() {
     <div id="wd-labs">
       <h1>Labs</h1>
       <h2>Kiwan Park</h2>
+
+      <p>
+        <a
+          id="wd-github"
+          href="https://github.com/kiwanPrac/webdev-client"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          My GitHub Repository
+        </a>
+      </p>
+
       <ul>
         <li>
           <Link href="/labs/lab1">Lab 1: HTML Examples</Link>
