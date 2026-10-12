@@ -3,14 +3,12 @@ import CourseStatus from "./Status";
 
 export default function Home() {
   return (
-    <div id="wd-home">
-      <div className="flex gap-4">
-        <div className="flex-1 min-w-0">
-          <Modules />
-        </div>
-        <div className="hidden lg:block w-[250px] shrink-0">
-          <CourseStatus />
-        </div>
+    <div id="wd-home" className="flex gap-4">
+      <div className="min-w-0 flex-1">
+        <Modules />
+      </div>
+      <div className="hidden w-[250px] shrink-0 lg:block">
+        <CourseStatus />
       </div>
     </div>
   );
