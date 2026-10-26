@@ -12,7 +12,7 @@ export default function Dashboard() {
         <CourseCard
           id="1234"
           title="CS5610 Web Development"
-          subtitle="Week2 - css and tailwind "
+          subtitle="Week2 - css and tailwind"
           image="/images/reactjs.jpg"
         />
         <CourseCard

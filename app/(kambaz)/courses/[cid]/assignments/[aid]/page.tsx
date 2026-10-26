@@ -1,11 +1,15 @@
 import Link from "next/link";
+import * as db from "../../../../database";
 
 export default async function AssignmentEditor({
   params,
 }: {
   params: Promise<{ cid: string; aid: string }>;
 }) {
-  const { cid } = await params;
+  const { cid, aid } = await params;
+  const assignment = db.assignments.find(
+    (a) => a._id === aid && a.course === cid
+  );
 
   const inputStyle =
     "w-full rounded border border-neutral-300 bg-white px-3 py-2 text-sm";
@@ -20,9 +24,12 @@ export default async function AssignmentEditor({
         </label>
         <input
           id="wd-name"
-          defaultValue="A1 - ENV + HTML"
+          defaultValue={assignment?.title ?? ""}
           className={inputStyle}
         />
+        <p className="mt-2 text-sm text-neutral-600">
+          Assignment id: {aid}
+        </p>
       </div>
 
       <div>
@@ -31,7 +38,7 @@ export default async function AssignmentEditor({
         </label>
         <textarea
           id="wd-description"
-          defaultValue="The assignment is available online Submit a link to the landing page of"
+          defaultValue={assignment?.description ?? ""}
           rows={5}
           className={inputStyle}
         />
@@ -44,7 +51,7 @@ export default async function AssignmentEditor({
         <input
           id="wd-points"
           type="number"
-          defaultValue={100}
+          defaultValue={assignment?.points ?? 100}
           className={inputStyle}
         />
       </div>
@@ -151,6 +158,7 @@ export default async function AssignmentEditor({
             <input
               type="date"
               id="wd-due-date"
+              defaultValue={assignment?.due ?? ""}
               className={inputStyle}
             />
           </div>
@@ -162,6 +170,7 @@ export default async function AssignmentEditor({
             <input
               type="date"
               id="wd-available-from"
+              defaultValue={assignment?.available ?? ""}
               className={inputStyle}
             />
           </div>
@@ -180,15 +189,16 @@ export default async function AssignmentEditor({
       </div>
 
       <div>
-      <label htmlFor="wd-ai-editor-notes" className={labelStyle}>
-        Sample notes
-      </label>
-      <textarea
-        id="wd-ai-editor-notes"
-        rows={4}
-        className={inputStyle}
-      />
+        <label htmlFor="wd-ai-editor-notes" className={labelStyle}>
+          Sample notes
+        </label>
+        <textarea
+          id="wd-ai-editor-notes"
+          rows={4}
+          className={inputStyle}
+        />
       </div>
+
       <div className="flex justify-end gap-3 border-t border-neutral-300 pt-4">
         <Link
           href={`/courses/${cid}/assignments`}

@@ -10,6 +10,14 @@ export default function GridLayout() {
             <h3>Right half</h3>
           </div>
         </div>
+        <div id="wd-ai-grid" className="wd-grid-row">
+            <div className="wd-grid-col-third-page wd-bg-color-yellow">
+                <h3>With AI - One third</h3>
+            </div>
+            <div className="wd-grid-col-two-thirds-page wd-bg-color-blue wd-fg-color-white">
+                <h3>With AI - Two thirds</h3>
+            </div>
+        </div>
         <div className="wd-grid-row">
             <div className="wd-grid-col-one-third wd-bg-color-green wd-fg-color-white">
                 <h3>On your own - Laying Out Content in a Grid Using CSS 1</h3>

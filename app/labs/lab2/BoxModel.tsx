@@ -21,6 +21,11 @@ export default function BoxModel() {
           <div className="wd-box-sizing-border">
             border-box: width 250px includes padding and border
           </div>
+          <div className="wd-box-sizing-border">
+            {/* border-box keeps the declared width of 250px, including padding and border. */}
+            border-box: 250px including padding and border
+          </div>
+          
         </div>
       </div>
     );

@@ -5,6 +5,8 @@ import { FaBookBible } from "react-icons/fa6";
 import { VscAccount } from "react-icons/vsc";
 import { MdSettings } from "react-icons/md";
 import { HiAcademicCap } from "react-icons/hi";
+import { HiOutlineBell } from "react-icons/hi2";
+import { IoNotificationsCircleOutline } from "react-icons/io5";
 
 export default function ReactIconsSampler() {
   return (
@@ -19,6 +21,8 @@ export default function ReactIconsSampler() {
         <FaRegClock />
         <MdSettings className="text-4xl text-green-600" />
         <HiAcademicCap className="text-4xl text-blue-600" />
+        <HiOutlineBell className="text-4xl text-blue-600" />
+        <IoNotificationsCircleOutline className="text-4xl text-purple-600" />
       </div>
     </div>
   );
