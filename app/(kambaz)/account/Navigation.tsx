@@ -2,15 +2,18 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useAccountContext } from "./AccountContext";
 
 export default function AccountNavigation() {
   const pathname = usePathname();
+  const { currentUser } = useAccountContext();
 
-  const links = [
-    { label: "Signin", href: "/account/signin" },
-    { label: "Signup", href: "/account/signup" },
-    { label: "Profile", href: "/account/profile" },
-  ];
+  const links = currentUser
+    ? [{ label: "Profile", href: "/account/profile" }]
+    : [
+        { label: "Signin", href: "/account/signin" },
+        { label: "Signup", href: "/account/signup" },
+      ];
 
   return (
     <div
