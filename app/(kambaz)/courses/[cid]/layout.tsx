@@ -28,7 +28,7 @@ export default function CoursesLayout({
   const [showCourseNav, setShowCourseNav] = useState(true);
 
   const isEnrolled =
-    !!currentUser &&
+    !currentUser ||
     enrollments.some(
       (enrollment) =>
         enrollment.user === currentUser._id &&
